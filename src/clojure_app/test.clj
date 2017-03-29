@@ -10,3 +10,5 @@
 
 
 (set [:r :r :w :t])
+
+(clojure.set/union #{:r :b :w} #{:w :p :y})
