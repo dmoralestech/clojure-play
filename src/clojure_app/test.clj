@@ -12,3 +12,5 @@
 (set [:r :r :w :t])
 
 (clojure.set/union #{:r :b :w} #{:w :p :y})
+
+(clojure.set/difference #{:r :b :w} #{:w :p :y})
