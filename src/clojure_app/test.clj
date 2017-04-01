@@ -75,3 +75,11 @@ developer
 (set [:a :b :c :a :b]) ;;#{:c :b :a}
 
 (set {:a 1, :b 2, :c 3}) ;;#{[:c 3] [:b 2] [:a 1]}
+
+(get #{:a :b :1} :a)
+
+(:a #{:a :b :1})
+
+(def setTemp #{:a :b :c})
+
+
