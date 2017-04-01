@@ -15,6 +15,8 @@
 
 (clojure.set/difference #{:r :b :w} #{:w :p :y})
 
+(clojure.set/intersection #{:r :b :w} #{:w :p :y})
+
 (def developer "Darwin")
 
 developer
@@ -66,4 +68,4 @@ developer
 
 (def h2 {:name "Nova", :surname "Castillo" :address "Cavite"})
 
-(merge h2 h)
+(merge h2 h);;{:name "Darwin", :surname "Morales", :address "Cav …
