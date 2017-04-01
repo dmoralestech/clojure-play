@@ -52,4 +52,18 @@ developer
 
 (get h :address) ;;nil
 
+(:name h) ;;"Darwin"
 
+(:surname h)
+
+(keys h);;(:name :surname)
+
+(vals h)
+
+(assoc h :name "Joseph");;{:name "Joseph", :surname "Morales"}
+
+(dissoc h :name)
+
+(def h2 {:name "Nova", :surname "Castillo" :address "Cavite"})
+
+(merge h2 h)
