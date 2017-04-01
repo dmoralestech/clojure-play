@@ -19,3 +19,16 @@
 
 developer
 
+;; list
+(first (rest (rest (rest '(:a :b :c :d :e :f)))))
+
+(cons 4 (cons 5 nil))
+
+(list 4 5)
+
+;;vector
+(first [:a :b :c])
+
+(def v [:1 :2 :3 :4])
+
+(rest v)
