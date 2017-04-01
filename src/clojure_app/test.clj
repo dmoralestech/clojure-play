@@ -45,3 +45,11 @@ developer
 
 (conj v :5 :6 :7)
 
+;;map
+(def h {:name "Darwin", :surname "Morales"})
+
+(get h :surname)
+
+(get h :address) ;;nil
+
+
