@@ -26,9 +26,22 @@ developer
 
 (list 4 5)
 
+
+
 ;;vector
 (first [:a :b :c])
 
 (def v [:1 :2 :3 :4])
 
 (rest v)
+
+(nth v 0)
+
+(last v)
+
+(count v)
+
+(conj v :5)
+
+(conj v :5 :6 :7)
+
