@@ -196,3 +196,9 @@ myName ;; "Darwin"
 
 (runMe 4)
 
+(defn caseSample[x]
+    (case ;; use case when there's only 1 test value
+      3 (str "equals 3")
+      5 (str "equals 5")))
+
+(caseSample 5)
