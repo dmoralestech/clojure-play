@@ -145,7 +145,7 @@ myName ;; "Darwin"
 
 *ns*
 
-(sayHello2 "Test")
+;; (sayHello2 "Test")
 
 
 ;; (require 'clojure.set)
@@ -181,4 +181,18 @@ myName ;; "Darwin"
 
 (some #{4 5} [1 2 3 4 5 6])
 
-(some #{6} [1 2 3 4 5 6])
+(some #{6} '(1 2 3 4 5 6))
+
+(if nil "Hello" "Goodbye") ;; Goodbye
+
+(if (not nil) "Hello" "Goodbye") ;; Hello
+
+(if-let [x (> 5 2)] "bigger" "smaller")
+
+(defn runMe[x]
+    (cond
+      (> x 3) (str "bigger than 3")
+      (> x 5) (str "bigger than 5")))
+
+(runMe 4)
+
