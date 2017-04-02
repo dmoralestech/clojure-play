@@ -152,3 +152,18 @@ myName ;; "Darwin"
 ;; can call difference, intersect, union now
 
 ;; (requeire 'clojure.net :as set) ;; set is now the alias
+
+(true? true)
+
+(true? false)
+
+(not true)
+
+(false? false)
+(nil? nil)
+
+(empty? [])
+
+(seq [1 2 3 4]) ;; turns a collectino to a sequence
+
+
