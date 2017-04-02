@@ -166,4 +166,12 @@ myName ;; "Darwin"
 
 (seq [1 2 3 4]) ;; turns a collectino to a sequence
 
+(every? odd? '(1 3 5))
+
+(defn drinkable? [x]
+  (= x :drinkable))
+
+(every? drinkable? '(:drinkable :poison))
+
+
 
