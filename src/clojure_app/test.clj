@@ -138,7 +138,7 @@ myName ;; "Darwin"
 
 *ns*
 
-(sayHello2 "Test")
+;;(sayHello2 "Test")
 
 (ns darwin.snacks)
 
@@ -173,5 +173,12 @@ myName ;; "Darwin"
 
 (every? drinkable? '(:drinkable :poison))
 
+(every? #(= % :drinkable) '(:drinkable :drinkable))
 
+(not-any? #(= % :drinkable) '(:drinkable :drinkable))
 
+(#{:a :b :c} :c)
+
+(some #{4 5} [1 2 3 4 5 6])
+
+(some #{6} [1 2 3 4 5 6])
