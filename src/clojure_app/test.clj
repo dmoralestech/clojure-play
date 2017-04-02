@@ -89,3 +89,13 @@ developer
 (conj setTemp :d :e :q);;#{:q :e :c :b :d :a}
 
 (disj setTemp :a)
+
+;; List are collections that you want to access from top of list
+
+;; vectors you can access it anywhere by position
+
+;; maps are key values
+
+;; sets are uniques elements
+
+
