@@ -110,3 +110,23 @@ myName ;; "Darwin"
 
 ;; [myName language] ;; language is not found
 
+(defn add[x y] (+ x y))
+
+(add 2 3)
+
+(defn sayHi [] "Hi")
+
+(sayHi)
+
+(defn sayHello [name] (str "Hello " name))
+
+(sayHello "Darwin")
+
+(def sayHello2 (fn [name] (str "Hello")))
+
+(sayHello2 "Nova")
+
+(def sayHello3 #(str "Hello" " " %1 " " %2))
+
+(sayHello3 "Darwin" "Morales")
+
