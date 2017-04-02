@@ -1,3 +1,5 @@
+*ns*
+
 (+ 2 2)
 
 (first '('a' 'b'))
@@ -128,5 +130,25 @@ myName ;; "Darwin"
 
 (def sayHello3 #(str "Hello" " " %1 " " %2))
 
+*ns*
+
 (sayHello3 "Darwin" "Morales")
 
+(ns darwin.foods)
+
+*ns*
+
+(sayHello2 "Test")
+
+(ns darwin.snacks)
+
+
+*ns*
+
+(sayHello2 "Test")
+
+
+;; (require 'clojure.set)
+;; can call difference, intersect, union now
+
+;; (requeire 'clojure.net :as set) ;; set is now the alias

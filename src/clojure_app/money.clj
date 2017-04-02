@@ -8,6 +8,8 @@
 ;---
 ;
 
+*ns*
+
 (declare validate-same-currency)
 
 (defrecord Currency [divisor sym desc])
