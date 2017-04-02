@@ -202,3 +202,17 @@ myName ;; "Darwin"
       5 (str "equals 5")))
 
 (caseSample 5)
+
+(defn toggle-grow [direction]
+    (if (= direction :small) :big :small))
+
+(defn oh-my [direction]
+  (str "Oh! You are growing " direction))
+
+(oh-my (toggle-grow :small))
+
+
+(defn surprise [direction]
+  ((comp oh-my toggle-grow) direction))
+
+(surprise :big)
