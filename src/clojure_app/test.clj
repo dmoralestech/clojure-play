@@ -222,6 +222,13 @@ myName ;; "Darwin"
 (let [[color size] ["blue" "medium" "blah"]]
   (str "The " color " door is " size))
 
+(let [[color [size]] ["blue" ["medium"]]]
+  (str "The " color " door is " size))
+
+(let [[color [size] :as original] ["blue" ["medium"]]]
+  (first original))
+
+
 ;;normally you'd do this
 (let [x ["blue" "medium"]]
   (str "The " (first x) " door is " (last x)))
@@ -230,5 +237,10 @@ myName ;; "Darwin"
       color (first x)
       size (last x)]
   (str "The " color " door is " size))
+
+
+
+(let [{f1 :f1 f2 :f2} {:f1 "1", :f2 "2"}]
+      (str f1 " " f2))
 
 
