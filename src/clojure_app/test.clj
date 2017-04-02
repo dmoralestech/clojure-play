@@ -106,3 +106,7 @@ developer
 
 myName ;; "Darwin"
 
+(let [myName "Darwin", language "Lisp"] [myName language])
+
+;; [myName language] ;; language is not found
+
