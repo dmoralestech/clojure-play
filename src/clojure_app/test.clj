@@ -211,8 +211,24 @@ myName ;; "Darwin"
 
 (oh-my (toggle-grow :small))
 
-
+;; compose
 (defn surprise [direction]
   ((comp oh-my toggle-grow) direction))
 
 (surprise :big)
+
+;; Destructuring allows you to assign named bindings  for the elements in vectors and maps
+
+(let [[color size] ["blue" "medium" "blah"]]
+  (str "The " color " door is " size))
+
+;;normally you'd do this
+(let [x ["blue" "medium"]]
+  (str "The " (first x) " door is " (last x)))
+
+(let [x ["blue" "medium"]
+      color (first x)
+      size (last x)]
+  (str "The " color " door is " size))
+
+
