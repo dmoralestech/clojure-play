@@ -98,4 +98,11 @@ developer
 
 ;; sets are uniques elements
 
+(first '(+ 1 1))
+
+(def myName "Darwin")
+
+(let [myName "Joseph"] myName) ;; "Joseph"
+
+myName ;; "Darwin"
 
