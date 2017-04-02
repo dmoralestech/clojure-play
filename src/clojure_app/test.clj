@@ -82,4 +82,10 @@ developer
 
 (def setTemp #{:a :b :c})
 
+(setTemp :a) ;; :a
 
+(contains? setTemp :x) ;; false
+
+(conj setTemp :d :e :q);;#{:q :e :c :b :d :a}
+
+(disj setTemp :a)
