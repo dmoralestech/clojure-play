@@ -243,9 +243,15 @@ myName ;; "Darwin"
 (let [{f1 :f1 f2 :f2} {:f1 "1", :f2 "2"}]
       (str f1 " " f2))
 
-(defn cons[x y]
-  (  ))
+(defn consDm[x y]
+  (fn [pick]
+    (cond
+      ((= 1 pick) x)
+      ((= 2 pick) y))))
 
-(defn car(x) (x 0))
-(defn cdr(x) (x 1))
+(defn carDm[x] (x 1))
+
+(defn cdrDm[x] (x 2))
+
+(carDm (consDm 1 2))
 
