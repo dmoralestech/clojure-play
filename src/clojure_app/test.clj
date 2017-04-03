@@ -243,4 +243,9 @@ myName ;; "Darwin"
 (let [{f1 :f1 f2 :f2} {:f1 "1", :f2 "2"}]
       (str f1 " " f2))
 
+(defn cons[x y]
+  (  ))
+
+(defn car(x) (x 0))
+(defn cdr(x) (x 1))
 
