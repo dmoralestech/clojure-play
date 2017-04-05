@@ -257,6 +257,15 @@ myName ;; "Darwin"
 
 (def adjs ["normal" "small" "large" "medium"])
 
+(defn alice-is [in out]
+  (if (empty? in)
+      out
+      (alice-is
+        (rest in)
+        (conj out
+              (str "Alice is " (first in))))))
 
+
+(alice-is adjs [])
 
 
