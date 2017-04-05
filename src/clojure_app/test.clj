@@ -253,5 +253,8 @@ myName ;; "Darwin"
 
 (defn cdrDm[x] (x 2))
 
-(carDm (consDm 1 2))
+;;(carDm (consDm 1 2))
+
+
+
 
