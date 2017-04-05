@@ -255,6 +255,8 @@ myName ;; "Darwin"
 
 ;;(carDm (consDm 1 2))
 
+(def adjs ["normal" "small" "large" "medium"])
+
 
 
 
