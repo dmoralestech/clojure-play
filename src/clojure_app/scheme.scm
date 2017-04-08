@@ -24,22 +24,40 @@
                   (pascal (- row 1) (- col 1))))))
 
 
+(define (log in) 
+  (display in) (newline))
+
+(define (log-number name value) 
+  (log (string-append name ": " (number->string value))))
+
+(define tolerance 0.00000001)
+(define (close-enuf? u v)
+   (log "close-enuf")
+   (< (abs (- u v)) tolerance))
+ 
 (define (fixed-point f start)
-  (define tolerance 0.00001)
-  (define (close-enuf? u v)
-     (< (abs (- u v)) tolerance))
+  (log "fixed-point")
   (define (iter old new)
+    (log "iter")
+     (log-number "old" old)
+     (log-number "new" new)
      (if (close-enuf? old new)
          new
          (iter new (f new))))
+  
   (iter start (f start)))
 
 (define (average x y)
   (/ (+ x y) 2))
 
 (define (sqrt x)
+  (log "sqrt")
   (fixed-point
       (lambda (y) (average (/ x y) y))
       1))
     
 (sqrt 64)
+;;(log "hello world")
+
+;;(number->string 45)
+
