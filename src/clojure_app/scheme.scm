@@ -22,3 +22,24 @@
          ((or (= 0 col) (= row col)) 1)
          (else (+ (pascal (- row 1) col)
                   (pascal (- row 1) (- col 1))))))
+
+
+(define (fixed-point f start)
+  (define tolerance 0.00001)
+  (define (close-enuf? u v)
+     (< (abs (- u v)) tolerance))
+  (define (iter old new)
+     (if (close-enuf? old new)
+         new
+         (iter new (f new))))
+  (iter start (f start)))
+
+(define (average x y)
+  (/ (+ x y) 2))
+
+(define (sqrt x)
+  (fixed-point
+      (lambda (y) (average (/ x y) y))
+      1))
+    
+(sqrt 64)
