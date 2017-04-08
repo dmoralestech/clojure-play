@@ -32,7 +32,8 @@
 
 (define tolerance 0.00000001)
 (define (close-enuf? u v)
-   (log "close-enuf")
+   (log-number "close-enuf u" u)
+   (log-number "close-enuf v" v)
    (< (abs (- u v)) tolerance))
  
 (define (fixed-point f start)
@@ -45,6 +46,8 @@
          new
          (iter new (f new))))
   
+  (log "call iter")
+  (log start)
   (iter start (f start)))
 
 (define (average x y)
@@ -53,11 +56,13 @@
 (define (sqrt x)
   (log "sqrt")
   (fixed-point
-      (lambda (y) (average (/ x y) y))
+      (lambda (y) 
+        (log-number "avg x" x)
+        (log-number "avg y" y)
+        (average (/ x y) y))
       1))
     
 (sqrt 64)
 ;;(log "hello world")
 
 ;;(number->string 45)
-
