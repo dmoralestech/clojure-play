@@ -66,3 +66,21 @@
 ;;(log "hello world")
 
 ;;(number->string 45)
+
+
+(define (make-stack)
+  (let ((stack '()))
+    (lambda (msg . args)
+      (cond 
+        [(eq? msg 'pop!)  (set! stack (cdr stack))]
+        [(eq? msg 'push!) (set! stack (append (reverse args) stack))]
+        [(eq? msg 'stack) stack]
+        [else "Not valid message!"]))))
+
+(define s (make-stack))
+(s 'push! 'a)
+(s 'push! 'b 'c 'd)
+(s 'stack)
+(s 'pop!)
+(s 'stack)
+
