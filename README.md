@@ -2,7 +2,7 @@
 
 ## some excerpts about functional programming
 
-- an imperative program is a functional program turned inside out
+- an imperative program is a functional program turned inside out. What occurs last in an imperative program occurs outermost in a functional one
 
 - Stop thinking about a program as a sequence of operations. Think about the relationship between input and output. Declare outputs in terms of inputs instead of instructing the machine to perform operations. The shift in thinking might be as subtle as in declaring x to be the sum of 2+2 rather than telling the machine to add 2 to 2 and store it in x. Declare the set of solutions to a sudoku puzzle as the subset of all possible diagrams filled with numbers, which fulfill certain conditions.
 
