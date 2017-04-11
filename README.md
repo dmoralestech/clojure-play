@@ -10,3 +10,5 @@
 - That's one thing I should mention: You change state by calling a function, not by making an assignment (at least if you're striving for pure FP).
 
 - And this is, in fact, what you are after: thinking like a functional programmer means intuitively knowing that a given problem can be expressed in terms of a given abstraction (or rather compositions of abstractions).
+
+- Closures have three useful properties: a) they are active, b) they have local state, and c) we can make multiple instances of them.
