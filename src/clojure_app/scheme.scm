@@ -84,3 +84,20 @@
 (s 'pop!)
 (s 'stack)
 
+;; f(x,y) = x(1 + xy)^2 + y(1-y) + (1+xy)(1-y)
+;; refactor to:
+;; a = 1 + xy
+;; b = 1 - y
+;; f(x,y) = xa^2 + yb + ab
+
+(define (f x y)
+    (define (f-helper a b))
+        (+ (* x (square a))
+           (* y b)
+           (* a b)))
+    (f-helper (+ 1 (* x y))
+              (- 1 y)))
+    
+
+
+
