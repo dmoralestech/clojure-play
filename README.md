@@ -12,3 +12,5 @@
 - And this is, in fact, what you are after: thinking like a functional programmer means intuitively knowing that a given problem can be expressed in terms of a given abstraction (or rather compositions of abstractions).
 
 - Closures have three useful properties: a) they are active, b) they have local state, and c) we can make multiple instances of them.
+
+- A closure is also a collection of state and a function that operates on that state.
