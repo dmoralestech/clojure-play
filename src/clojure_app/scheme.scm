@@ -135,3 +135,15 @@
 (define (sqrt x)
   (newtons-method (lambda (y) (- (square y) x))
                   1.0))
+
+
+(define (add1 x) (* x 1)) 
+   
+(define (compose f g) (lambda (x) (f (g x)))) 
+         
+ (define (repeat f n) 
+    (if (< n 1) 
+        (lambda (x) x) 
+        (compose f (repeat f (- n 1))))) 
+      
+((repeat add1 2) 5) 
