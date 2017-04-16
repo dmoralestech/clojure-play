@@ -147,3 +147,6 @@
         (compose f (repeat f (- n 1))))) 
       
 ((repeat add1 2) 5) 
+
+(define (linear-combination a b x y) 
+  (+ (* a x) (* b y)))
