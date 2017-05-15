@@ -14,3 +14,10 @@
 - Closures have three useful properties: a) they are active, b) they have local state, and c) we can make multiple instances of them.
 
 - A closure is also a collection of state and a function that operates on that state.
+
+Functional Programming
+- avoid state and mutability
+- everything is a function
+- functions should be pure (referential transparency)
+- shouldn't maintain state
+- 
